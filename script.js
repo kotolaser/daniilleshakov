@@ -63,3 +63,25 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+/* ===== Copy Button ===== */
+document.querySelectorAll('.copy-btn').forEach(btn => {
+  btn.addEventListener('click', async () => {
+    const text = btn.getAttribute('data-copy');
+    const copyIcon = btn.querySelector('.copy-icon');
+    const checkIcon = btn.querySelector('.check-icon');
+
+    try {
+      await navigator.clipboard.writeText(text);
+      copyIcon.style.display = 'none';
+      checkIcon.style.display = 'block';
+
+      setTimeout(() => {
+        copyIcon.style.display = 'block';
+        checkIcon.style.display = 'none';
+      }, 1500);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  });
+});
