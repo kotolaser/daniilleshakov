@@ -42,6 +42,9 @@ document.querySelectorAll('.project-card').forEach(card => {
   const collapseCase = (e) => {
     e.stopPropagation();
     caseEl.classList.remove('open');
+    setTimeout(() => {
+      card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 100);
   };
 
   info.addEventListener('click', toggleCase);
