@@ -565,6 +565,7 @@ img {
   .nav__links {
     position: fixed;
     top: var(--nav-height);
+    height: fit-content;
     left: 0;
     right: 0;
     bottom: 0;
