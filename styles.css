@@ -130,6 +130,14 @@ img {
   color: var(--color-text);
 }
 
+.nav__link--accent {
+  color: var(--color-accent) !important;
+}
+
+.nav__link--accent:hover {
+  color: var(--color-accent-hover) !important;
+}
+
 .nav__burger {
   display: none;
   flex-direction: column;
