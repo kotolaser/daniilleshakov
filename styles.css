@@ -570,11 +570,11 @@ img {
     bottom: 0;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 28px;
-    background: rgba(250, 250, 250, 0.98);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    background: #FFFFFF;
     opacity: 0;
     visibility: hidden;
     transition: opacity var(--transition), visibility var(--transition);
