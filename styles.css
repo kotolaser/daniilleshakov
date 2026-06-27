@@ -100,7 +100,7 @@ img {
 .nav__container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 24px;
+  padding: 0 16px 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -245,26 +245,6 @@ img {
 
 .btn--outline:hover {
   border-color: var(--color-text);
-}
-
-/* ===== About ===== */
-.about {
-  padding: 120px 0;
-}
-
-.about__content {
-  max-width: 680px;
-}
-
-.about__content p {
-  font-size: 1.0625rem;
-  color: var(--color-text-secondary);
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-.about__content p:last-child {
-  margin-bottom: 0;
 }
 
 /* ===== Projects ===== */
@@ -808,7 +788,6 @@ img {
     justify-content: center;
   }
 
-  .about,
   .projects,
   .skills,
   .contacts {
@@ -825,6 +804,10 @@ img {
 
   .case {
     padding: 0 20px 32px;
+  }
+
+  .container {
+    padding: 0 16px;
   }
 
   .case__heading {
