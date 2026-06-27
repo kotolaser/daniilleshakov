@@ -126,7 +126,7 @@ document.addEventListener('keydown', (e) => {
 lightbox.addEventListener('wheel', (e) => {
   e.preventDefault();
   const delta = e.deltaY > 0 ? -0.1 : 0.1;
-  scale = Math.max(1, Math.min(5, scale + delta));
+  scale = Math.max(1, Math.min(8, scale + delta));
   updateTransform();
 }, { passive: false });
 
@@ -191,7 +191,7 @@ lightboxImg.addEventListener('touchmove', (e) => {
     const dx = touches[0].clientX - touches[1].clientX;
     const dy = touches[0].clientY - touches[1].clientY;
     const dist = Math.sqrt(dx * dx + dy * dy);
-    scale = Math.max(1, Math.min(5, scale * (dist / lastTouchDist)));
+    scale = Math.max(1, Math.min(8, scale * (dist / lastTouchDist)));
     lastTouchDist = dist;
     updateTransform();
   }
