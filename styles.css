@@ -20,7 +20,7 @@
   --font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --max-width: 1120px;
   --nav-height: 64px;
-  --radius: 12px;
+  --radius: 20px;
   --radius-sm: 8px;
   --transition: 0.3s ease;
 }
@@ -444,9 +444,94 @@ img {
 }
 
 /* Images inside case blocks */
+.case__block .img-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.case__block .img-wrap__icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  pointer-events: none;
+}
+
+.case__block .img-wrap__icon svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
 .case__block img {
   width: 100%;
-  border-radius: var(--radius-sm);
+  border-radius: 20px;
+}
+
+/* ===== Lightbox ===== */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  cursor: zoom-out;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox--active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox__image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-drag: none;
+  transition: transform 0.2s ease;
+}
+
+.lightbox__image--dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+.lightbox__close {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1001;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* ===== Skills ===== */

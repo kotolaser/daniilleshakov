@@ -72,9 +72,7 @@
         <!-- Project 1: Inspector App -->
         <div class="project-card fade-in" data-project="inspector">
           <div class="project-card__preview">
-            <div class="placeholder placeholder--wide placeholder--cover">
-              <span>Обложка проекта</span>
-            </div>
+            <img src="img/Inspection cover.png" alt="Приложение инспектора">
           </div>
           <div class="project-card__info">
             <h3 class="project-card__title">Приложение инспектора</h3>
@@ -200,7 +198,7 @@
               <div class="case__block">
                 <h3 class="case__heading">Outcome</h3>
                 <p>Мобильный интерфейс, объединяющий несколько рабочих процессов инспектора в одном сценарии: просмотр задач, переход в карточку, фиксацию замечаний, добавление фотографий и дальнейшую коммуникацию по объекту. Проект показывает работу не только с визуальной частью, но и с логикой взаимодействия, последовательностью действий и организацией мобильного рабочего процесса.</p>
-                <div class="placeholder placeholder--wide"><span>Финальный UI</span></div>
+                <img src="img/Inspection cover.png" alt="Финальный UI — Приложение инспектора">
               </div>
 
               <button class="case__collapse-btn" type="button">Свернуть</button>
@@ -467,6 +465,17 @@
       <p>&copy; 2026 Даниил Лешаков. Все права защищены.</p>
     </div>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Закрыть">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img class="lightbox__image" id="lightboxImage" src="" alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>
