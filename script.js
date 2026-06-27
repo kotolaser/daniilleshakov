@@ -35,6 +35,10 @@ document.querySelectorAll('.project-card').forEach(card => {
       openCase.classList.remove('open');
     });
     if (!isOpen) {
+      caseEl.querySelectorAll('img[data-src]').forEach(img => {
+        img.src = img.dataset.src;
+        img.removeAttribute('data-src');
+      });
       caseEl.classList.add('open');
       setTimeout(() => {
         caseEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -107,7 +111,7 @@ function closeLightbox() {
 document.querySelector('.projects__grid').addEventListener('click', (e) => {
   const img = e.target.closest('.project-card img');
   if (img && img.src && !img.closest('.project-card__preview')) {
-    openLightbox(img.src);
+    openLightbox(img.getAttribute('data-full') || img.src);
   }
 });
 
