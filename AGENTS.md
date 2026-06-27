@@ -22,7 +22,6 @@
 - **Мобильный конструктор условий** — краткий кейс
 - **Дизайн-система "Helios 3"** — краткий кейс
 - **Inderoom** — краткий кейс
-- **Kanban** — краткий кейс
 
 ## Дизайн
 - Светлая тема, минимализм
@@ -34,6 +33,63 @@
 ## Контакты
 - Email: daemory@yandex.ru
 - Telegram: t.me/kotolaser
+
+## Замена плейсхолдеров на изображения
+
+### Подготовка
+Положи файлы изображений в корень сайта (рядом с `index.html`) или создай папку `images/`.
+
+### Обложки проектов (без скругления)
+Найди в `index.html` блоки с классом `placeholder--cover` и замени:
+
+```html
+<!-- Было -->
+<div class="placeholder placeholder--wide placeholder--cover">
+  <span>Обложка проекта</span>
+</div>
+
+<!-- Стало -->
+<img src="images/project-cover.jpg" alt="Проект">
+```
+
+Скругления не будет — класс `placeholder--cover` убирает `border-radius`.
+
+### Изображения внутри кейсов (со скруглением)
+Найди в `index.html` блоки с классом `placeholder--wide` (без `--cover`) внутри `.project-card__case` и замени:
+
+```html
+<!-- Было -->
+<div class="placeholder placeholder--wide">
+  <span>Общий вид приложения</span>
+</div>
+
+<!-- Стало -->
+<img src="images/screenshot.jpg" alt="Общий вид приложения">
+```
+
+Скругление `8px` добавится автоматически через CSS-правило `.case__block img`.
+
+### CSS (уже есть, ничего менять не надо)
+```css
+img {
+  max-width: 100%;
+  display: block;        /* резиновые, без отступа снизу */
+}
+
+.case__block img {
+  width: 100%;
+  border-radius: var(--radius-sm);  /* 8px скругление внутри кейсов */
+}
+
+.placeholder--cover {
+  border-radius: 0;      /* без скругления у обложек */
+}
+```
+
+### Контакты
+- Email: daemory@yandex.ru
+- Telegram: t.me/kotolaser
+- Телефон: +7 951 669-42-10
 
 ## Контент
 Тексты для кейсов — из файлов `source/Inspector case.md` и `source/Portfolio structure.md`.

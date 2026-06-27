@@ -439,6 +439,16 @@ img {
   min-height: 280px;
 }
 
+.placeholder--cover {
+  border-radius: 0;
+}
+
+/* Images inside case blocks */
+.case__block img {
+  width: 100%;
+  border-radius: var(--radius-sm);
+}
+
 /* ===== Skills ===== */
 .skills {
   padding: 120px 0;
