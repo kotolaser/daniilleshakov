@@ -317,6 +317,8 @@ img {
 
 .case__block {
   margin-bottom: 48px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 48px;
 }
 
 .case__block:last-child {
@@ -327,8 +329,6 @@ img {
   font-size: 1.125rem;
   font-weight: 700;
   margin-bottom: 16px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--color-border);
 }
 
 .case__block p {
