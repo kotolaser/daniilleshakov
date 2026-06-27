@@ -1,3 +1,6 @@
+/* ===== Disable browser scroll restoration on reload ===== */
+history.scrollRestoration = 'manual';
+
 /* ===== Navigation ===== */
 const nav = document.getElementById('nav');
 const burger = document.getElementById('navBurger');
