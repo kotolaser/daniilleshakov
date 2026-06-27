@@ -578,7 +578,7 @@ img {
   max-height: 90vh;
   object-fit: contain;
   cursor: grab;
-  touch-action: manipulation;
+  touch-action: none;
   user-select: none;
   -webkit-user-drag: none;
   transition: transform 0.2s ease;

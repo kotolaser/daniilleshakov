@@ -181,13 +181,14 @@ lightboxImg.addEventListener('touchstart', (e) => {
     touchStartY = touches[0].clientY - translateY;
     lightboxImg.classList.add('lightbox__image--dragging');
   } else if (touches.length === 2) {
+    e.preventDefault();
     isDragging = false;
     isPinching = true;
     const dx = touches[0].clientX - touches[1].clientX;
     const dy = touches[0].clientY - touches[1].clientY;
     lastTouchDist = Math.sqrt(dx * dx + dy * dy);
   }
-}, { passive: true });
+}, { passive: false });
 
 lightboxImg.addEventListener('touchmove', (e) => {
   const touches = e.touches;
@@ -197,11 +198,20 @@ lightboxImg.addEventListener('touchmove', (e) => {
     updateTransform();
   } else if (touches.length === 2 && isPinching) {
     e.preventDefault();
+    const vw = lightbox.clientWidth;
+    const vh = lightbox.clientHeight;
+    const midX = (touches[0].clientX + touches[1].clientX) / 2 - vw / 2;
+    const midY = (touches[0].clientY + touches[1].clientY) / 2 - vh / 2;
+    const imgX = (midX - translateX) / scale;
+    const imgY = (midY - translateY) / scale;
     const dx = touches[0].clientX - touches[1].clientX;
     const dy = touches[0].clientY - touches[1].clientY;
     const dist = Math.sqrt(dx * dx + dy * dy);
     scale = Math.max(1, Math.min(8, scale * (dist / lastTouchDist)));
+    translateX = midX - imgX * scale;
+    translateY = midY - imgY * scale;
     lastTouchDist = dist;
+    if (scale <= 1) { translateX = 0; translateY = 0; }
     updateTransform();
   }
 }, { passive: false });
