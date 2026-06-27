@@ -584,6 +584,7 @@ img {
   opacity: 0;
   visibility: hidden;
   cursor: zoom-out;
+  touch-action: manipulation;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
@@ -597,6 +598,7 @@ img {
   max-height: 90vh;
   object-fit: contain;
   cursor: grab;
+  touch-action: manipulation;
   user-select: none;
   -webkit-user-drag: none;
   transition: transform 0.2s ease;
@@ -617,16 +619,16 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   border: none;
-  border-radius: 50%;
+  border-radius: 12px;
   color: #fff;
   cursor: pointer;
   transition: background 0.2s ease;
 }
 
 .lightbox__close:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* ===== Skills ===== */
