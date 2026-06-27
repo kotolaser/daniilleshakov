@@ -564,7 +564,7 @@ img {
   opacity: 0;
   visibility: hidden;
   cursor: zoom-out;
-  touch-action: manipulation;
+  touch-action: none;
   transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 

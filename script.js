@@ -101,11 +101,13 @@ function openLightbox(src) {
   resetTransform();
   lightbox.classList.add('lightbox--active');
   document.body.style.overflow = 'hidden';
+  document.documentElement.style.touchAction = 'none';
 }
 
 function closeLightbox() {
   lightbox.classList.remove('lightbox--active');
   document.body.style.overflow = '';
+  document.documentElement.style.touchAction = '';
 }
 
 document.querySelector('.projects__grid').addEventListener('click', (e) => {
