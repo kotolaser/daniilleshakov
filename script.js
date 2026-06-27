@@ -125,8 +125,17 @@ document.addEventListener('keydown', (e) => {
 
 lightbox.addEventListener('wheel', (e) => {
   e.preventDefault();
-  const delta = e.deltaY > 0 ? -0.1 : 0.1;
-  scale = Math.max(1, Math.min(8, scale + delta));
+  const vw = lightbox.clientWidth;
+  const vh = lightbox.clientHeight;
+  const mx = e.clientX - vw / 2;
+  const my = e.clientY - vh / 2;
+  const imgX = (mx - translateX) / scale;
+  const imgY = (my - translateY) / scale;
+  const dir = e.deltaY > 0 ? -0.1 : 0.1;
+  scale = Math.max(1, Math.min(8, scale + dir));
+  translateX = mx - imgX * scale;
+  translateY = my - imgY * scale;
+  if (scale <= 1) { translateX = 0; translateY = 0; }
   updateTransform();
 }, { passive: false });
 
