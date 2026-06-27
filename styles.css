@@ -393,25 +393,46 @@ img {
 .flow-step {
   display: flex;
   gap: 16px;
-  padding: 20px 0 20px 28px;
-  border-left: 2px solid var(--color-border);
+  padding: 18px 0 20px 28px;
   margin-left: 18px;
   position: relative;
 }
 
-.flow-step:first-child {
-  padding-top: 4px;
+.flow-step::before,
+.flow-step::after {
+  content: '';
+  position: absolute;
+  left: -1px;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.flow-step::before {
+  top: 0;
+  height: 30px;
+}
+
+.flow-step:first-child::before {
+  display: none;
+}
+
+.flow-step::after {
+  top: 30px;
+  bottom: 0;
+}
+
+.flow-step:last-child::after {
+  display: none;
 }
 
 .flow-step--final {
-  border-left-color: transparent;
   padding-bottom: 0;
 }
 
 .flow-step__number {
   position: absolute;
   left: -19px;
-  top: 16px;
+  top: 12px;
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -424,14 +445,6 @@ img {
   justify-content: center;
   z-index: 1;
   flex-shrink: 0;
-}
-
-.flow-step:first-child .flow-step__number {
-  top: 0;
-}
-
-.flow-step:last-child .flow-step__number {
-  top: 0;
 }
 
 .flow-step__body {
