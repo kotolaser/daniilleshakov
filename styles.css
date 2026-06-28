@@ -619,7 +619,24 @@ img {
   padding: 120px 0;
 }
 
-.skills__grid {
+.skills__category {
+  margin-bottom: 32px;
+}
+
+.skills__category:last-child {
+  margin-bottom: 0;
+}
+
+.skills__category-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.skills__tags {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
@@ -633,12 +650,6 @@ img {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 100px;
-  transition: all var(--transition);
-}
-
-.skill-tag:hover {
-  border-color: var(--color-accent);
-  color: var(--color-accent);
 }
 
 /* ===== Contacts ===== */
