@@ -21,6 +21,7 @@
 Сайт: https://kotolaser.github.io/daniilleshakov/
 Ветка `main` → workflow `Pages` собирает `_site` по белому списку (`index.html`, `en/`, `ru/`, `cv/`, `img/`, `files/`, `styles.css`, `script.js`) и публикует. Файлы вне списка (например `AGENTS.md`) на сайт не попадают.
 При переносе файлов между `index.html` и `ru/index.html` помни про относительные пути: в корне ассеты без префикса, в `ru/` — с `../`.
+Перезапуск — только новым прогоном (`gh workflow run pages.yml`). `gh run rerun --failed` на Pages ломает деплой: повторный job заливает второй артефакт `github-pages`, и `deploy-pages` падает на `Multiple artifacts named "github-pages"`. Таймаут `deploy-pages` не сокращать — очередь Pages бывает 4–5 минут.
 
 ## Секции
 1. **Навигация** — fixed top, якорные ссылки, мобильное меню
