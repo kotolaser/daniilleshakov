@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Даниил Лешаков — UX/UI Дизайнер</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav__container">
+      <a href="#hero" class="nav__logo">Даниил Лешаков</a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="https://t.me/kotolaser" target="_blank" rel="noopener" class="nav__link--accent">t.me/kotolaser</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#skills">Навыки</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+        <li><a href="../" class="nav__lang">EN</a></li>
+      </ul>
+      <button class="nav__burger" id="navBurger" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero__container">
+      <p class="hero__label fade-in">UX/UI Designer</p>
+      <h1 class="hero__title fade-in">Даниил Лешаков</h1>
+      <p class="hero__desc fade-in">
+        UX/UI дизайнер с фокусом на мобильные и веб-продукты.
+        Умею соединять структуру, пользовательскую логику и визуальную систему
+        в целостный интерфейс, готовый к дальнейшей разработке.
+      </p>
+      <p class="hero__desc fade-in">
+        А ещё могу сделать простой сайт под ключ — сам спроектирую и сверстаю.
+      </p>
+      <div class="hero__actions fade-in">
+        <a href="#projects" class="btn btn--primary">Смотреть проекты</a>
+        <a href="#contacts" class="btn btn--outline">Связаться</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="section-title fade-in">Проекты</h2>
+      <div class="projects__grid">
+
+        <!-- Project 1: Inspector App -->
+        <div class="project-card fade-in" data-project="inspector">
+          <div class="project-card__preview">
+            <img src="../img/case/inspector/Inspection cover.png" alt="Приложение инспектора">
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title">Приложение инспектора</h3>
+            <p class="project-card__tags">Mobile · UX/UI · User Flow</p>
+            <p class="project-card__desc">
+              Мобильный интерфейс для проведения проверок, фиксации замечаний
+              и коммуникации по объекту.
+            </p>
+          </div>
+          <div class="project-card__case" id="case-inspector">
+            <div class="case">
+              <div class="case__block">
+                <h3 class="case__heading">Обзор проекта</h3>
+                <p><strong>Приложение инспектора</strong> — мобильный интерфейс для проведения проверок, фиксации замечаний и коммуникации по объекту. Проект сфокусирован на полевом сценарии работы: пользователь должен быстро открыть задачу, изучить детали, зафиксировать проблему, прикрепить фотографии и продолжить обсуждение внутри приложения.</p>
+                <p>Приложение построено на базе существующей ERP-системы, которая изначально работала только на десктопе. Моя задача — взять заложенную в ней логику продукта и на её основе спроектировать мобильное приложение под конкретный кейс заказчика.</p>
+                <img data-src="../img/case/inspector/Inspection more frames.png" alt="Общий вид приложения">
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">Цель продукта</h3>
+                <p>Создать понятный и быстрый мобильный инструмент для инспектора, который помогает работать с проверками на месте: просматривать задачи, переходить в карточки, фиксировать результаты, добавлять визуальные материалы и отслеживать дальнейшую коммуникацию по замечаниям.</p>
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">Дизайн-задача</h3>
+                <p>Воплотить сценарий инспекции в мобильном интерфейсе. Сделать работу быстрой, а информацию - легко считываемой. Объединить в одном приложении несколько процессов: работу с задачами, фотофиксацию, просмотр деталей и коммуникацию.</p>
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">Моя роль</h3>
+                <ul>
+                  <li>Собрал логику ключевых пользовательских сценариев</li>
+                  <li>
+                    Адаптировал логику десктопной ERP-системы в мобайл:
+                    <ul>
+                      <li>Бизнес-объекты — списком и фильтр задач по ним</li>
+                      <li>Чаты</li>
+                      <li>Просмотр файлов</li>
+                    </ul>
+                  </li>
+                  <li>Добавил сценарий инспекции к адаптированным разделам системы</li>
+                  <li>Спроектировал сценарий фотофиксации</li>
+                  <li>Создал мобильные компоненты</li>
+                  <li>Оформил взаимодействие с чатами</li>
+                  <li>Собрал финальный UI мобильного приложения</li>
+                </ul>
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">Взаимодействие</h3>
+                <ul>
+                  <li><strong>Разработка:</strong> лид кор-команды — верифицировал структуру на предмет соответствия логике продукта, на базе которого делалась мобильная версия.</li>
+                  <li><strong>Дизайн:</strong> лид дизайна — согласовывал UX, визуал и логику на соответствие сценариям, проверял качество адаптации.</li>
+                  <li><strong>Дизайн-система:</strong> разработчик дизайн-системы — координация по мобильным компонентам.</li>
+                  <li><strong>Менеджмент:</strong> согласовывал результаты на каждом этапе проекта.</li>
+                </ul>
+                <p>Раздел профиля и уведомлений реализовывался другим дизайнером после меня — эти экраны в кейсе не представлены.</p>
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">User Flow</h3>
+                <div class="flow-steps">
+                  <div class="flow-step">
+                    <div class="flow-step__number">1</div>
+                    <div class="flow-step__body">
+                      <h4 class="flow-step__title">Список задач</h4>
+                      <p class="flow-step__desc">Просмотр активных проверок и выбор нужной</p>
+                    </div>
+                  </div>
+                  <div class="flow-step">
+                    <div class="flow-step__number">2</div>
+                    <div class="flow-step__body">
+                      <h4 class="flow-step__title">Карточка проверки</h4>
+                      <p class="flow-step__desc">Детали, статус и связанные действия</p>
+                    </div>
+                  </div>
+                  <div class="flow-step">
+                    <div class="flow-step__number">3</div>
+                    <div class="flow-step__body">
+                      <h4 class="flow-step__title">Добавление замечания</h4>
+                      <p class="flow-step__desc">Фиксация результата по пункту проверки</p>
+                    </div>
+                  </div>
+                  <div class="flow-step">
+                    <div class="flow-step__number">4</div>
+                    <div class="flow-step__body">
+                      <h4 class="flow-step__title">Фотофиксация</h4>
+                      <div class="flow-step__branches">
+                        <span class="flow-step__branch">📷 Камера</span>
+                        <span class="flow-step__branch">🖼 Галерея</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flow-step">
+                    <div class="flow-step__number">5</div>
+                    <div class="flow-step__body">
+                      <h4 class="flow-step__title">Подтверждение и сохранение</h4>
+                      <p class="flow-step__desc">Вложение прикрепляется к замечанию</p>
+                    </div>
+                  </div>
+                  <div class="flow-step flow-step--final">
+                    <div class="flow-step__number">6</div>
+                    <div class="flow-step__body">
+                      <h4 class="flow-step__title">Обсуждение в комментариях</h4>
+                      <p class="flow-step__desc">Коммуникация внутри контекста задачи</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">Информационная архитектура</h3>
+                <div class="case__grid-2">
+                  <div>
+                    <h4>Рабочие задачи</h4>
+                    <ul>
+                      <li>Список задач / замечаний</li>
+                      <li>Переключение между состояниями</li>
+                      <li>Переход в карточку</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Карточка проверки</h4>
+                    <ul>
+                      <li>Основная информация</li>
+                      <li>Описание и статус</li>
+                      <li>Связанные действия</li>
+                      <li>Комментарии</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Работа с вложениями</h4>
+                    <ul>
+                      <li>Запуск камеры</li>
+                      <li>Выбор из галереи</li>
+                      <li>Просмотр файлов</li>
+                      <li>Подтверждение добавления</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Коммуникация</h4>
+                    <ul>
+                      <li>Список чатов</li>
+                      <li>Диалог</li>
+                      <li>Обсуждение по задаче</li>
+                    </ul>
+                </div>
+              </div>
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">Ключевые сценарии</h3>
+                <div class="case__grid-2">
+                  <div>
+                    <h4>Работа с задачей</h4>
+                    <p>Инспектор открывает список задач, выбирает проверку и переходит в карточку с деталями, статусом и связанной информацией.</p>
+                  </div>
+                  <div>
+                    <h4>Фиксация замечания</h4>
+                    <p>Из карточки пользователь добавляет замечание, вносит информацию по результату проверки и сохраняет её в контексте задачи.</p>
+                  </div>
+                  <div>
+                    <h4>Фотофиксация</h4>
+                    <p>Пользователь прикладывает изображения через камеру или галерею, чтобы зафиксировать проблему визуально в момент осмотра.</p>
+                  </div>
+                  <div>
+                    <h4>Коммуникация</h4>
+                    <p>После фиксации замечания пользователь продолжает обсуждение внутри интерфейса, используя комментарии или чат.</p>
+                  </div>
+                </div>
+                <img data-src="../img/case/inspector/inspection key frames.png" alt="Ключевые экраны">
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">UX-решения</h3>
+                <ul>
+                  <li><strong>Быстрый доступ к действиям</strong> — основные действия доступны без длинных переходов и лишних уровней навигации</li>
+                  <li><strong>Понятная структура экранов</strong> — каждый экран решает конкретную задачу: просмотр, фиксация, вложения или коммуникация</li>
+                  <li><strong>Поддержка полевого сценария</strong> — интерфейс для использования в движении: читаемость, простая иерархия, короткие действия</li>
+                  <li><strong>Связь задачи и обсуждения</strong> — коммуникация встроена в рабочий процесс, не существует отдельно от контекста</li>
+                  <li><strong>Фото как часть процесса</strong> — добавление изображений не вторичная функция, а ключевой элемент фиксации результата</li>
+                </ul>
+              </div>
+
+              <div class="case__block">
+                <h3 class="case__heading">Результат</h3>
+                <p>Мобильный интерфейс, объединяющий несколько рабочих процессов инспектора в одном сценарии: просмотр задач, переход в карточку, фиксацию замечаний, добавление фотографий и дальнейшую коммуникацию по объекту. Проект показывает работу не только с визуальной частью, но и с логикой взаимодействия, последовательностью действий и организацией мобильного рабочего процесса.</p>
+                <img data-src="../img/case/inspector/inspection mobile full.png" alt="Финальный UI — Приложение инспектора">
+              </div>
+
+              <button class="case__collapse-btn" type="button">Свернуть</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Mobile Constructor -->
+        <div class="project-card fade-in" data-project="constructor">
+          <div class="project-card__preview">
+            <img src="../img/case/constructor/filter cover.png" alt="Мобильный конструктор условий">
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title">Мобильный конструктор условий</h3>
+            <p class="project-card__tags">Mobile · UX/UI · Logic Builder</p>
+            <p class="project-card__desc">
+              Мобильный интерфейс для создания и настройки логических условий
+              и правил в рамках продуктовой системы.
+            </p>
+          </div>
+          <div class="project-card__case" id="case-constructor">
+            <div class="case">
+              <div class="case__block">
+                <h3 class="case__heading">О проекте</h3>
+                <p>Проект мобильного интерфейса для конструирования логических условий. Пользователь создаёт правила и условия через визуальный интерфейс, без необходимости писать код.</p>
+                <img data-src="../img/case/constructor/filter creation.png" alt="Создание фильтра">
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Задача</h3>
+                <p>Спроектировать понятный мобильный интерфейс для создания сложных логических конструкций. Сделать процесс настройки условий интуитивным и доступным для пользователей без технического бэкграунда.</p>
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Моя роль</h3>
+                <ul>
+                  <li>Проработал структуру экранов конструктора</li>
+                  <li>Собрал логику добавления и редактирования условий</li>
+                  <li>Спроектировал визуальный язык блоков и связей</li>
+                  <li>Оформил финальный UI</li>
+                </ul>
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Решение</h3>
+                <p>Интерфейс построен на принципе визуальных блоков: каждое условие — отдельный элемент, который можно добавить, изменить или удалить. Логические операторы (И, ИЛИ) связывают блоки в единую структуру. Навигация между уровнями вложенности реализована через переходы между экранами.</p>
+                <img data-src="../img/case/constructor/filter filled.png" alt="Заполненный фильтр">
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Результат</h3>
+                <p>Получился мобильный конструктор, в котором пользователь может последовательно создавать и редактировать логические условия без перегруженного интерфейса. Структура экранов поддерживает как простые, так и вложенные сценарии.</p>
+              </div>
+
+              <button class="case__collapse-btn" type="button">Свернуть</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Helios 3 Design System -->
+        <div class="project-card fade-in" data-project="helios">
+          <div class="project-card__preview">
+            <img src="../img/case/helios/helios cover.png" alt="Дизайн-система Helios 3">
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title">Дизайн-система «Helios 3»</h3>
+            <p class="project-card__tags">Design System · UI-kit · Components</p>
+            <p class="project-card__desc">
+              Компонентная дизайн-система: типографика, цвета, UI-элементы,
+              паттерны взаимодействия и правила использования.
+            </p>
+          </div>
+          <div class="project-card__case" id="case-helios">
+            <div class="case">
+              <div class="case__block">
+                <h3 class="case__heading">О проекте</h3>
+                <p>Дизайн-система «Helios 3» — набор компонентов, правил и паттернов для обеспечения визуальной целостности множества продуктов и команд. Система покрывает типографику, цветовую палитру, UI-элементы и их состояния.</p>
+                <img data-src="../img/case/helios/helios components.png" alt="Обзор системы">
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Задача</h3>
+                <p>Создать единую систему компонентов, которая обеспечит консистентность интерфейсов в множестве продуктов, ускорит разработку новых экранов и упростит передачу макетов в разработку.<br/>
+                Сделать переход существующей компонентной базы на Tailwind CSS.<br/>
+                Цветовая система должна поддерживать большое количество тем для разных заказчиков.</p>
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Моя роль</h3>
+                <ul>
+                  <li>Определил набор базовых компонентов</li>
+                  <li>Улучшил архитектуру цветовой палитры и типографическую шкалу</li>
+                  <li>Перенёс размерную сетку токенов размеров из Tailwind CSS</li>
+                  <li>Собрал UI-kit с состояниями элементов</li>
+                  <li>Описал правила использования компонентов</li>
+                  <li>Сопровождал разработку компонентов</li>
+                </ul>
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Состав системы</h3>
+                <div class="case__grid-2">
+                  <div>
+                    <h4>Типографика</h4>
+                    <p>Иерархия заголовков, основной текст, вспомогательные стили, размеры и межстрочные интервалы.</p>
+                  </div>
+                  <div>
+                    <h4>Цветовая палитра</h4>
+                    <p>Основные, акцентные, семантические и нейтральные цвета с поддержкой большого количества тем для разных заказчиков.</p>
+                  </div>
+                  <div>
+                    <h4>Компоненты</h4>
+                    <p>Кнопки, поля ввода, карточки, навигация, модальные окна, тосты, чекбоксы, радиокнопки.</p>
+                  </div>
+                  <div>
+                    <h4>Паттерны</h4>
+                    <p>Формы, списки, таблицы, дашборды — типовые layouts и правила их построения.</p>
+                  </div>
+                </div>
+                <img data-src="../img/case/helios/helios typography.png" alt="Типографика и токены">
+                <img data-src="../img/case/helios/helios docs.png" alt="UI-kit и компоненты">
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Результат</h3>
+                <p>Система компонентов, которая обеспечивает визуальную целостность продуктов. Ускоряет создание новых экранов и упрощает коммуникацию между дизайном и разработкой. Использование размерной сетки Tailwind CSS позволило разработчикам использовать документацию Tailwind для упрощения работы.</p>
+              </div>
+
+              <button class="case__collapse-btn" type="button">Свернуть</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Inderoom -->
+        <div class="project-card fade-in" data-project="inderoom">
+          <div class="project-card__preview">
+            <img src="../img/case/inderoom/inderoom cover.png" alt="Inderoom">
+          </div>
+          <div class="project-card__info">
+            <h3 class="project-card__title">Inderoom</h3>
+            <p class="project-card__tags">Web · UI/UX · Catalog</p>
+            <p class="project-card__desc">
+              Веб-интерфейс для просмотра и выбора интерьерных решений
+              с акцентом на визуальную подачу и навигацию.
+            </p>
+          </div>
+          <div class="project-card__case" id="case-inderoom">
+            <div class="case">
+              <div class="case__block">
+                <h3 class="case__heading">О проекте</h3>
+                <p>Веб-проект с визуально насыщенной подачей контента. Интерфейс для просмотра и сравнения интерьерных решений с акцентом на визуальную подачу и удобную навигацию.</p>
+                <img data-src="../img/case/inderoom/inderoom portfolio.png" alt="Главная страница">
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Задача</h3>
+                <p>Организовать контент так, чтобы пользователю было удобно просматривать подборки, переходить между категориями частных и общественных проектов. Сделать знакомство с работами студии дизайна интерьеров без перегруженного интерфейса.</p>
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Моя роль</h3>
+                <ul>
+                  <li>Проработал структуру страниц</li>
+                  <li>Выстроил логику каталога и карточек</li>
+                  <li>Адаптирровал UI для планшета и телефона</li>
+                </ul>
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Решение</h3>
+                <p>Фокус на визуальной подаче контента, структуре карточек, читаемой композиции страниц и удобной навигации между разделами. Интерфейс достаточно нейтральный, чтобы акцент оставался на контенте, но при этом целостный и современный по визуальному языку.</p>
+                <img data-src="../img/case/inderoom/inderoom case.png" alt="Страница проекта">
+              </div>
+              <div class="case__block">
+                <h3 class="case__heading">Результат</h3>
+                <p>Интерфейс, в котором визуальный контент подан аккуратно и системно, а сценарий просмотра работ и категорий выглядит понятным и последовательным.</p>
+                <img data-src="../img/case/inderoom/inderoom all screens.png" alt="Все экраны">
+              </div>
+
+              <button class="case__collapse-btn" type="button">Свернуть</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <h2 class="section-title fade-in">Навыки</h2>
+
+      <div class="skills__category fade-in">
+        <h3 class="skills__category-title">Процессы</h3>
+        <div class="skills__tags">
+          <span class="skill-tag">User Research</span>
+          <span class="skill-tag">User Flow</span>
+          <span class="skill-tag">Information Architecture</span>
+          <span class="skill-tag">Wireframing</span>
+          <span class="skill-tag">Prototyping</span>
+        </div>
+      </div>
+
+      <div class="skills__category fade-in">
+        <h3 class="skills__category-title">Типы продуктов</h3>
+        <div class="skills__tags">
+          <span class="skill-tag">Mobile Design</span>
+          <span class="skill-tag">Web Design</span>
+          <span class="skill-tag">Dashboard Design</span>
+        </div>
+      </div>
+
+      <div class="skills__category fade-in">
+        <h3 class="skills__category-title">Системы и инструменты</h3>
+        <div class="skills__tags">
+          <span class="skill-tag">Design Systems</span>
+          <span class="skill-tag">UI-kit</span>
+          <span class="skill-tag">Figma</span>
+          <span class="skill-tag">Developer Handoff</span>
+          <span class="skill-tag">HTML</span>
+          <span class="skill-tag">CSS</span>
+          <span class="skill-tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="skills__category fade-in">
+        <h3 class="skills__category-title">AI & Automation</h3>
+        <div class="skills__tags">
+          <span class="skill-tag">AI-assisted Design</span>
+          <span class="skill-tag">AI Agents Collaboration</span>
+          <span class="skill-tag">AI UX Patterns</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacts -->
+  <section class="contacts" id="contacts">
+    <div class="container">
+      <h2 class="section-title fade-in">Контакты</h2>
+      <div class="contacts__content fade-in">
+        <p class="contacts__text">
+          Открыт к предложениям и сотрудничеству.
+          Напишите мне — обсудим ваш проект.
+        </p>
+        <div class="contacts__links">
+          <div class="contact-row">
+            <a href="../cv/" target="_blank" class="contact-link">
+              <span class="contact-link__icon">📄</span>
+              <span>Смотреть резюме</span>
+            </a>
+          </div>
+          <div class="contact-row">
+            <a href="https://t.me/kotolaser" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link__icon">✈️</span>
+              <span>t.me/kotolaser</span>
+            </a>
+            <button class="copy-btn" data-copy="t.me/kotolaser" aria-label="Копировать Telegram">
+              <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="5" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M11 5V3C11 2.44772 10.5523 2 10 2H3C2.44772 2 2 2.44772 2 3V10C2 10.5523 2.44772 11 3 11H5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <path d="M3 8L6.5 11.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <div class="contact-row">
+            <a href="mailto:daemory@yandex.ru" class="contact-link">
+              <span class="contact-link__icon">📧</span>
+              <span>daemory@yandex.ru</span>
+            </a>
+            <button class="copy-btn" data-copy="daemory@yandex.ru" aria-label="Копировать email">
+              <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="5" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M11 5V3C11 2.44772 10.5523 2 10 2H3C2.44772 2 2 2.44772 2 3V10C2 10.5523 2.44772 11 3 11H5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <path d="M3 8L6.5 11.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <!--
+          <div class="contact-row">
+            <a href="tel:+79516694210" class="contact-link">
+              <span class="contact-link__icon">📞</span>
+              <span>+7 951 669-42-10</span>
+            </a>
+            <button class="copy-btn" data-copy="+79516694210" aria-label="Копировать телефон">
+              <svg class="copy-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="5" y="5" width="9" height="9" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M11 5V3C11 2.44772 10.5523 2 10 2H3C2.44772 2 2 2.44772 2 3V10C2 10.5523 2.44772 11 3 11H5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:none">
+                <path d="M3 8L6.5 11.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <!-- <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Даниил Лешаков. Все права защищены.</p>
+    </div>
+  </footer> -->
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Закрыть">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img class="lightbox__image" id="lightboxImage" src="" alt="">
+  </div>
+
+  <script src="../script.js"></script>
+</body>
+</html>
